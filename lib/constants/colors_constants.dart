@@ -14,3 +14,8 @@ Color borderColor = const Color.fromRGBO(0, 0, 0, 0.1);
 // TEXT COLORS
 Color orangeTextColor = const Color(0xffFF460A);
 Color greyTextColor = const Color(0xff8F8F8F);
+
+//
+Color cardColor = const Color(0xffF47B0A);
+Color bankColor = const Color(0xffEB4796);
+Color paypalColor = const Color(0xff0038FF);

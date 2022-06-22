@@ -13,14 +13,18 @@ class ConstanceData {
   static const egg = baseImageUrl + "egg.png";
   static const lettuce = baseImageUrl + "lettuce.png";
   static const moimoi = baseImageUrl + "moimoi.png";
+  static const user = baseImageUrl + "user.png";
+  // static const moimoi = baseImageUrl + "moimoi.png";
+  // static const moimoi = baseImageUrl + "moimoi.png";
+  // static const moimoi = baseImageUrl + "moimoi.png";
 
   // SVGs
   static const cart = baseSvgUrl + "cart.svg";
   static const heart = baseSvgUrl + "heart.svg";
   static const search = baseSvgUrl + "search.svg";
-  static const user = baseSvgUrl + "user.svg";
-  static const home = baseSvgUrl + "home.svg";
-  static const history = baseSvgUrl + "history.svg";
+  static const bank = baseSvgUrl + "bank.svg";
+  static const creditcard = baseSvgUrl + "cc.svg";
+  static const paypal = baseSvgUrl + "paypal.svg";
   static const menu = baseSvgUrl + "menu.svg";
   static const nohistory = baseSvgUrl + "no-history.svg";
 }
