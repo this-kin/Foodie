@@ -20,45 +20,45 @@ Food food1 = Food(
   image: ConstanceData.veggie,
   name: 'Veggie\ntomato mix',
   price: 'N1,900',
-  info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",
+  info: "Delivered between monday aug\nand thursday 20 from 8pm to 91:32 pm",
   policy:
-      "All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.",
+      "All our foods are double checked before\nleaving our stores so by any case you\nfound a broken food please contact our\nhotline immediately.",
 );
 
 Food food2 = Food(
   image: ConstanceData.fish,
   name: 'Spicy\nfish sauce',
   price: 'N2,300.99',
-  info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",
+  info: "Delivered between monday aug\nand thursday 20 from 8pm to 91:32 pm",
   policy:
-      "All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.",
+      "All our foods are double checked before\nleaving our stores so by any case you\nfound a broken food please contact our\nhotline immediately.",
 );
 
 Food food3 = Food(
   image: ConstanceData.chicken,
   name: 'Fried\nchicken m.',
   price: 'N1,900',
-  info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",
+  info: "Delivered between monday aug\nand thursday 20 from 8pm to 91:32 pm",
   policy:
-      "All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.",
+      "All our foods are double checked before\nleaving our stores so by any case you\nfound a broken food please contact our\nhotline immediately.",
 );
 
 Food food4 = Food(
   image: ConstanceData.egg,
   name: 'Moi-moi\nand ekpa.',
   price: 'N1,900',
-  info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",
+  info: "Delivered between monday aug\nand thursday 20 from 8pm to 91:32 pm",
   policy:
-      "All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.",
+      "All our foods are double checked before\nleaving our stores so by any case you\nfound a broken food please contact our\nhotline immediately.",
 );
 
 Food food5 = Food(
   image: ConstanceData.veggie,
   name: 'Veggie\ntomato mix',
   price: 'N1,900',
-  info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",
+  info: "Delivered between monday aug\nand thursday 20 from 8pm to 91:32 pm",
   policy:
-      "All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.",
+      "All our foods are double checked before\nleaving our stores so by any case you\nfound a broken food please contact our\nhotline immediately.",
 );
 
 List<Food> foods = [food1, food2, food3, food4, food5];
