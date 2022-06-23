@@ -23,6 +23,12 @@ class EmailField extends StatelessWidget {
       cursorColor: primaryColor,
       controller: controller,
       keyboardType: TextInputType.emailAddress,
+      style: TextStyle(
+        fontFamily: baseFontUrl,
+        fontSize: 15.sp,
+        color: greyColor,
+        fontWeight: FontWeight.w600,
+      ),
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(
@@ -83,6 +89,12 @@ class PasswordField extends StatelessWidget {
       focusNode: focusNode,
       cursorColor: primaryColor,
       controller: controller,
+      style: TextStyle(
+        fontFamily: baseFontUrl,
+        fontSize: 15.sp,
+        color: greyColor,
+        fontWeight: FontWeight.w600,
+      ),
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: hintText,
