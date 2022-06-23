@@ -2,10 +2,12 @@ import 'package:fooddelivery/constants/product_constants.dart';
 import 'package:fooddelivery/core/exports.dart';
 import 'package:fooddelivery/presentation/screens/authentication.dart';
 import 'package:fooddelivery/presentation/screens/cart.dart';
+import 'package:fooddelivery/presentation/screens/checkout.dart';
 import 'package:fooddelivery/presentation/screens/food_screen.dart';
 import 'package:fooddelivery/presentation/screens/home.dart';
 import 'package:fooddelivery/presentation/screens/more.dart';
 import 'package:fooddelivery/presentation/screens/onboarding.dart';
+import 'package:fooddelivery/presentation/screens/payment.dart';
 import 'package:fooddelivery/presentation/screens/splash.dart';
 
 class RouteGenerator {
@@ -16,6 +18,8 @@ class RouteGenerator {
   static const String more = '/more';
   static const String food = "/food";
   static const String cart = "/cart";
+  static const String checkout = "/checkout";
+  static const String payment = "/payment";
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -34,6 +38,10 @@ class RouteGenerator {
             builder: (context) => FoodScreen(food: settings.arguments as Food));
       case cart:
         return MaterialPageRoute(builder: (context) => const Cart());
+      case checkout:
+        return MaterialPageRoute(builder: (context) => const Checkout());
+      case payment:
+        return MaterialPageRoute(builder: (context) => const Confirm());
       default:
         return MaterialPageRoute(builder: (context) => const Splash());
     }
