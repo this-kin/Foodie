@@ -1,6 +1,7 @@
 import 'package:fooddelivery/constants/product_constants.dart';
 import 'package:fooddelivery/core/exports.dart';
 import 'package:fooddelivery/presentation/widgets/cart_widgets/cart_tile.dart';
+import 'package:fooddelivery/presentation/widgets/primary_button.dart';
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
@@ -19,11 +20,15 @@ class _CartState extends State<Cart> {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 30.w),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios),
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      size: 20.sp,
+                    ),
                     onPressed: () {
                       // go back
                       Navigator.pop(context);
@@ -60,6 +65,13 @@ class _CartState extends State<Cart> {
                           arguments: snapshot);
                     },
                   );
+                },
+              ),
+              SizedBox(height: 200.h),
+              PrimaryButton(
+                text: "Complete Order",
+                onPressed: () {
+                  // checkout
                 },
               )
             ],

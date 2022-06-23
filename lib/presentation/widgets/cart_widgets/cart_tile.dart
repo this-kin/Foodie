@@ -39,9 +39,8 @@ class _CartTileState extends State<CartTile> {
                   widget.food!.image!,
                   height: 120.h,
                   width: 120.w,
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
-                SizedBox(width: 15.w),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -64,6 +63,58 @@ class _CartTileState extends State<CartTile> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
+                  ],
+                ),
+                SizedBox(width: 80.w),
+                Column(
+                  children: [
+                    SizedBox(height: 50.h),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: primaryColor,
+                        borderRadius: BorderRadius.circular(30.sp),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(5.0.w),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                _count--;
+                              },
+                              child: Icon(
+                                Icons.minimize_outlined,
+                                color: whiteColor,
+                                size: 12.sp,
+                              ),
+                            ),
+                            SizedBox(width: 10.w),
+                            Text(
+                              _count.toString(),
+                              style: TextStyle(
+                                fontFamily: baseFontUrl,
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w500,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(width: 10.w),
+                            InkWell(
+                              onTap: () {
+                                _count++;
+                              },
+                              child: Icon(
+                                Icons.add,
+                                color: whiteColor,
+                                size: 12.sp,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 )
               ],

@@ -67,8 +67,8 @@ class FoodWidget extends StatelessWidget {
               right: 0,
               child: Image.asset(
                 image!,
-                height: 165.h,
-                width: 165.w,
+                height: 200.h,
+                width: 200.w,
                 fit: BoxFit.cover,
               ),
             )
@@ -138,7 +138,7 @@ class SecondFoodWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: -30.h,
+            top: -20.h,
             left: 0,
             right: 0,
             child: Image.asset(
