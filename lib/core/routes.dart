@@ -1,6 +1,7 @@
 import 'package:fooddelivery/constants/product_constants.dart';
 import 'package:fooddelivery/core/exports.dart';
 import 'package:fooddelivery/presentation/screens/authentication.dart';
+import 'package:fooddelivery/presentation/screens/cart.dart';
 import 'package:fooddelivery/presentation/screens/food_screen.dart';
 import 'package:fooddelivery/presentation/screens/home.dart';
 import 'package:fooddelivery/presentation/screens/more.dart';
@@ -14,6 +15,7 @@ class RouteGenerator {
   static const String authentication = '/authentication';
   static const String more = '/more';
   static const String food = "/food";
+  static const String cart = "/cart";
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -30,6 +32,8 @@ class RouteGenerator {
       case food:
         return MaterialPageRoute(
             builder: (context) => FoodScreen(food: settings.arguments as Food));
+      case cart:
+        return MaterialPageRoute(builder: (context) => const Cart());
       default:
         return MaterialPageRoute(builder: (context) => const Splash());
     }

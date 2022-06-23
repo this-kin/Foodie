@@ -72,6 +72,10 @@ class _MoreState extends State<More> {
                   image: snapshot.image,
                   name: snapshot.name,
                   price: snapshot.price,
+                  onPressed: () {
+                    Navigator.pushNamed(context, RouteGenerator.food,
+                        arguments: snapshot);
+                  },
                 );
               },
             )

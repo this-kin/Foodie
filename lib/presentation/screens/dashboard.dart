@@ -42,6 +42,7 @@ class Dashboard extends StatelessWidget {
                         icon: ConstanceData.cart,
                         onPressed: () {
                           // open cart
+                          Navigator.pushNamed(context, RouteGenerator.cart);
                         },
                       ),
                     ],

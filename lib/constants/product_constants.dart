@@ -37,7 +37,7 @@ Food food2 = Food(
 );
 
 Food food3 = Food(
-  image: ConstanceData.chicken,
+  image: ConstanceData.veggie,
   name: 'Fried\nchicken m.',
   price: 'N1,900',
   info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",
@@ -46,7 +46,7 @@ Food food3 = Food(
 );
 
 Food food4 = Food(
-  image: ConstanceData.egg,
+  image: ConstanceData.fish,
   name: 'Moi-moi\nand ekpa.',
   price: 'N1,900',
   info: "Delivered between monday aug and thursday 20 from 8pm to 91:32 pm",

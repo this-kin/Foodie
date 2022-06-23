@@ -14,7 +14,7 @@ class ConstanceData {
   static const lettuce = baseImageUrl + "lettuce.png";
   static const moimoi = baseImageUrl + "moimoi.png";
   static const user = baseImageUrl + "user.png";
-  // static const moimoi = baseImageUrl + "moimoi.png";
+  static const swipe = baseImageUrl + "swiper.png";
   // static const moimoi = baseImageUrl + "moimoi.png";
   // static const moimoi = baseImageUrl + "moimoi.png";
 

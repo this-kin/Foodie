@@ -26,7 +26,7 @@ class EmailField extends StatelessWidget {
       style: TextStyle(
         fontFamily: baseFontUrl,
         fontSize: 15.sp,
-        color: greyColor,
+        color: blackColor,
         fontWeight: FontWeight.w600,
       ),
       decoration: InputDecoration(
@@ -92,7 +92,7 @@ class PasswordField extends StatelessWidget {
       style: TextStyle(
         fontFamily: baseFontUrl,
         fontSize: 15.sp,
-        color: greyColor,
+        color: blackColor,
         fontWeight: FontWeight.w600,
       ),
       keyboardType: TextInputType.emailAddress,

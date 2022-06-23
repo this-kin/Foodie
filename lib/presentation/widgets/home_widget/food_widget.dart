@@ -62,10 +62,15 @@ class FoodWidget extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: -10.h,
+              top: 0.h,
               left: 0,
               right: 0,
-              child: Image.asset(image!),
+              child: Image.asset(
+                image!,
+                height: 165.h,
+                width: 165.w,
+                fit: BoxFit.cover,
+              ),
             )
           ],
         ),
@@ -93,60 +98,56 @@ class SecondFoodWidget extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       borderRadius: BorderRadius.circular(30.w),
-      child: SizedBox(
-        height: 320.h,
-        width: 160.w,
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                height: 300.h,
-                width: 160.w,
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(30.w),
-                ),
-                child: Column(
-                  children: [
-                    const Spacer(),
-                    Text(
-                      name!,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 20.sp,
-                        fontFamily: baseFontUrl,
-                        fontWeight: FontWeight.w800,
-                        color: blackColor,
-                      ),
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 300.h,
+              width: 160.w,
+              decoration: BoxDecoration(
+                color: whiteColor,
+                borderRadius: BorderRadius.circular(30.w),
+              ),
+              child: Column(
+                children: [
+                  const Spacer(),
+                  Text(
+                    name!,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20.sp,
+                      fontFamily: baseFontUrl,
+                      fontWeight: FontWeight.w800,
+                      color: blackColor,
                     ),
-                    SizedBox(height: 10.h),
-                    Text(
-                      price!,
-                      style: TextStyle(
-                        fontSize: 15.sp,
-                        fontFamily: baseFontUrl,
-                        fontWeight: FontWeight.w800,
-                        color: primaryColor,
-                      ),
+                  ),
+                  SizedBox(height: 10.h),
+                  Text(
+                    price!,
+                    style: TextStyle(
+                      fontSize: 15.sp,
+                      fontFamily: baseFontUrl,
+                      fontWeight: FontWeight.w800,
+                      color: primaryColor,
                     ),
-                    SizedBox(height: 20.h),
-                  ],
-                ),
+                  ),
+                  SizedBox(height: 20.h),
+                ],
               ),
             ),
-            Positioned(
-              top: -5.h,
-              left: 0,
-              right: 0,
-              child: Image.asset(
-                image!,
-                height: 128.h,
-                width: 128.w,
-              ),
-            )
-          ],
-        ),
+          ),
+          Positioned(
+            top: -30.h,
+            left: 0,
+            right: 0,
+            child: Image.asset(
+              image!,
+              height: 165.h,
+              width: 165.w,
+            ),
+          )
+        ],
       ),
     );
   }
