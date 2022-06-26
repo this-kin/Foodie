@@ -27,4 +27,5 @@ class ConstanceData {
   static const paypal = baseSvgUrl + "paypal.svg";
   static const menu = baseSvgUrl + "menu.svg";
   static const nohistory = baseSvgUrl + "no-history.svg";
+  static const wifi = baseSvgUrl + "wifi.svg";
 }
