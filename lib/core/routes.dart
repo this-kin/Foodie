@@ -47,7 +47,7 @@ class RouteGenerator {
       case connection:
         return MaterialPageRoute(builder: (context) => const Connection());
       default:
-        return MaterialPageRoute(builder: (context) => const Splash());
+        return MaterialPageRoute(builder: (context) => const Home());
     }
   }
 }

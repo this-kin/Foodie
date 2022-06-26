@@ -150,6 +150,7 @@ class FoodScreen extends StatelessWidget {
                   text: "Add to Cart",
                   onPressed: () {
                     //
+                    Navigator.pushNamed(context, RouteGenerator.checkout);
                   },
                 )
               ],

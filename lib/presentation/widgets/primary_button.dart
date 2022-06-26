@@ -59,11 +59,11 @@ class PrimaryButton extends StatelessWidget {
           color: primaryColor,
           borderRadius: BorderRadius.circular(30.sp),
         ),
-        alignment: Alignment.center,
         child: Material(
           type: MaterialType.transparency,
           child: InkWell(
             onTap: onPressed,
+            borderRadius: BorderRadius.circular(30.sp),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 120.w, vertical: 25.h),
               child: Text(

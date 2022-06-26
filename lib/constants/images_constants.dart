@@ -28,4 +28,5 @@ class ConstanceData {
   static const menu = baseSvgUrl + "menu.svg";
   static const nohistory = baseSvgUrl + "no-history.svg";
   static const wifi = baseSvgUrl + "wifi.svg";
+  static const ecart = baseSvgUrl + "e-cart.svg";
 }

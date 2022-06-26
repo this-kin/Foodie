@@ -96,3 +96,15 @@ Payment payment3 = Payment(
 );
 
 List<Payment> payments = [payment1, payment2, payment3];
+
+class DeliveryM {
+  final String? type;
+
+  DeliveryM({this.type});
+}
+
+DeliveryM gateway1 = DeliveryM(type: "Door delivery");
+
+DeliveryM gateway2 = DeliveryM(type: "Pick up");
+
+List<DeliveryM> deliveries = [gateway1, gateway2];
