@@ -5,16 +5,23 @@ import 'package:fooddelivery/presentation/screens/history.dart';
 import 'package:fooddelivery/presentation/screens/profile.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  final VoidCallback? onPressed;
+
+  const Home({
+    Key? key,
+    this.onPressed,
+  }) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+class _HomeState extends State<Home> {
 // List of pages
   final List<Widget> _pages = const [
-    Dashboard(),
+    Dashboard(
+        //  onPressed: ,
+        ),
     Favorite(),
     Profile(),
     History()

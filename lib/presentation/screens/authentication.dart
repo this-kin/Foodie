@@ -131,8 +131,10 @@ class _AuthenticationState extends State<Authentication> {
                             text: "Login",
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                Navigator.pushNamedAndRemoveUntil(context,
-                                    RouteGenerator.home, (route) => false);
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context,
+                                    RouteGenerator.homescreen,
+                                    (route) => false);
                               }
                             },
                           )

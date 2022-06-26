@@ -29,4 +29,9 @@ class ConstanceData {
   static const nohistory = baseSvgUrl + "no-history.svg";
   static const wifi = baseSvgUrl + "wifi.svg";
   static const ecart = baseSvgUrl + "e-cart.svg";
+  static const buy = baseSvgUrl + "buy.svg";
+  static const offer = baseSvgUrl + "offer.svg";
+  static const policy = baseSvgUrl + "policy.svg";
+  static const profile = baseSvgUrl + "profile.svg";
+  static const security = baseSvgUrl + "security.svg";
 }

@@ -6,6 +6,7 @@ import 'package:fooddelivery/presentation/screens/checkout.dart';
 import 'package:fooddelivery/presentation/screens/connection.dart';
 import 'package:fooddelivery/presentation/screens/food_screen.dart';
 import 'package:fooddelivery/presentation/screens/home.dart';
+import 'package:fooddelivery/presentation/screens/home_screen.dart';
 import 'package:fooddelivery/presentation/screens/more.dart';
 import 'package:fooddelivery/presentation/screens/onboarding.dart';
 import 'package:fooddelivery/presentation/screens/order.dart';
@@ -24,7 +25,7 @@ class RouteGenerator {
   static const String payment = "/payment";
   static const String connection = "/connection";
   static const String order = "/order";
-
+  static const String homescreen = "/home_screen";
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splash:
@@ -50,6 +51,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const Connection());
       case order:
         return MaterialPageRoute(builder: (context) => const Order());
+      case homescreen:
+        return MaterialPageRoute(builder: (context) => const HomeScreen());
       default:
         return MaterialPageRoute(builder: (context) => const Home());
     }
