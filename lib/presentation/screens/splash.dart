@@ -1,4 +1,6 @@
+import 'package:connectivity/connectivity.dart';
 import 'package:fooddelivery/core/exports.dart';
+import 'package:fooddelivery/logic/connectivity_helper.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -38,5 +40,13 @@ class _SplashState extends State<Splash> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    final ConnectivityHelper connectivityHelper =
+        ConnectivityHelper(Connectivity());
+    connectivityHelper.initialize(context);
   }
 }
