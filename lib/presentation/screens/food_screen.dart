@@ -149,7 +149,7 @@ class FoodScreen extends StatelessWidget {
                 PrimaryButton(
                   text: "Add to Cart",
                   onPressed: () {
-                    //
+                    // go to checkout
                     Navigator.pushNamed(context, RouteGenerator.checkout);
                   },
                 )

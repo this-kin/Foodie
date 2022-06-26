@@ -185,8 +185,9 @@ class _ConfirmState extends State<Confirm> {
                   PrimaryButton(
                     text: "Checkout",
                     onPressed: () {
-                      // go to payment
-                      Navigator.pushNamed(context, RouteGenerator.payment);
+                      // go home
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, RouteGenerator.home, (route) => false);
                     },
                   )
                 ],

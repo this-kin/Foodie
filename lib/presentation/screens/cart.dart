@@ -79,6 +79,7 @@ class _CartState extends State<Cart> {
                 text: "Complete Order",
                 onPressed: () {
                   // checkout
+                  Navigator.pushNamed(context, RouteGenerator.checkout);
                 },
               ),
               SizedBox(height: 30.h),
