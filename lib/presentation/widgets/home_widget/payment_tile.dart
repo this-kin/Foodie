@@ -50,8 +50,8 @@ class _PaymentTileState extends State<PaymentTile> {
                 ),
                 child: SvgPicture.asset(
                   widget.payment!.image!,
-                  height: 25.h,
-                  width: 25.w,
+                  height: 22.h,
+                  width: 22.w,
                 ),
               ),
               SizedBox(width: 10.w),

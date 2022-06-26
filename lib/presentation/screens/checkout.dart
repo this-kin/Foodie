@@ -233,7 +233,8 @@ class _CheckoutState extends State<Checkout> {
                 PrimaryButton(
                   text: "Proceed to payment",
                   onPressed: () {
-                    //
+                    // go to payment
+                    Navigator.pushNamed(context, RouteGenerator.payment);
                   },
                 )
               ],
