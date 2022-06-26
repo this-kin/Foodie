@@ -60,6 +60,13 @@ class _CartState extends State<Cart> {
                   final snapshot = foods[index];
                   return CartTile(
                     food: snapshot,
+                    index: index,
+                    onDeleted: () {
+                      setState(() {
+                        foods.removeAt(index);
+                        showSnack(index);
+                      });
+                    },
                     onPressed: () {
                       Navigator.pushNamed(context, RouteGenerator.food,
                           arguments: snapshot);
@@ -67,17 +74,23 @@ class _CartState extends State<Cart> {
                   );
                 },
               ),
-              SizedBox(height: 200.h),
+              const Spacer(),
               PrimaryButton(
                 text: "Complete Order",
                 onPressed: () {
                   // checkout
                 },
-              )
+              ),
+              SizedBox(height: 30.h),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void showSnack(index) {
+    Scaffold.of(context).showSnackBar(
+        SnackBar(content: Text("${foods[index].name} has been deleted")));
   }
 }
