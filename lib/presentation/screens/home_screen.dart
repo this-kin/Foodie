@@ -11,27 +11,19 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
+  late AnimationController controller;
+  final Duration _duration = const Duration(milliseconds: 500);
+  late Animation<double> scaleAnimation;
+  bool isOpen = false;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 300));
-    _animation =
-        CurvedAnimation(parent: _controller, curve: Curves.bounceInOut);
-  }
-
-  //
-  bool _isOpen = false;
-
-  void animate() {
-    setState(() {});
-    if (_controller.isCompleted) {
-      _controller.reverse();
-    }
-    _controller.forward();
+    controller = AnimationController(vsync: this, duration: _duration);
+    scaleAnimation = Tween(begin: 1.0, end: 0.8).animate(controller)
+      ..addStatusListener((status) {
+        print(status);
+      });
   }
 
   @override
@@ -42,19 +34,47 @@ class _HomeScreenState extends State<HomeScreen>
         children: [
           const MyDrawer(),
           AnimatedPositioned(
-            top: _isOpen ? size.height * 0.08 : 0.0,
-            bottom: _isOpen ? size.height * 0.08 : 0.0,
-            left: _isOpen ? size.width * 0.55.w : 0.0,
-            right: _isOpen ? size.width * -0.45.w : 0.0,
-            duration: const Duration(milliseconds: 300),
+            top: isOpen ? size.height * 0.08 : 0.0,
+            bottom: isOpen ? size.height * 0.08 : 0.0,
+            left: isOpen ? size.width * 0.55.w : 0.0,
+            right: isOpen ? size.width * -0.45.w : 0.0,
+            duration: _duration,
             child: ScaleTransition(
-              scale: _animation,
+              scale: scaleAnimation,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(_isOpen ? 15.sp : 0.0),
-                child: Home(onPressed: animate),
+                borderRadius: BorderRadius.circular(isOpen ? 15.sp : 0.0),
+                child: Home(
+                  onPressed: () {
+                    setState(() {
+                      isOpen = !isOpen;
+                      if (isOpen) {
+                        controller.reverse();
+                      } else {
+                        controller.forward();
+                      }
+                    });
+                  },
+                ),
               ),
             ),
           ),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                isOpen = !isOpen;
+                if (isOpen) {
+                  controller.reverse();
+                } else {
+                  controller.forward();
+                }
+              });
+            },
+            icon: Icon(
+              Icons.play_arrow,
+              size: 100.sp,
+              color: whiteColor,
+            ),
+          )
         ],
       ),
     );

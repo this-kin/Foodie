@@ -5,7 +5,7 @@ import 'package:fooddelivery/presentation/screens/history.dart';
 import 'package:fooddelivery/presentation/screens/profile.dart';
 
 class Home extends StatefulWidget {
-  final Function? onPressed;
+  final VoidCallback? onPressed;
 
   const Home({
     Key? key,
@@ -17,10 +17,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // current page index
+  // list of pages
+  late List<Widget> _pages = [];
+
+  // tracks current page index
   int _currentIndex = 0;
 
-  // Page controller
+  // page controller
   final PageController _pageController = PageController();
 
   void onPageChanged(int index) {
@@ -35,6 +38,19 @@ class _HomeState extends State<Home> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    _pages = <Widget>[
+      Dashboard(
+        onPressed: () {},
+      ),
+      const Favorite(),
+      const Profile(),
+      const History(),
+    ];
+  }
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -46,21 +62,12 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: theme.backgroundColor,
         body: PageView(
-          // key: _globalKey,
-          children: [
-            Dashboard(
-              onPressed: () {},
-            ),
-            const Favorite(),
-            const Profile(),
-            const History()
-          ],
+          children: _pages,
           controller: _pageController,
           onPageChanged: onPageChanged,
           physics: const NeverScrollableScrollPhysics(),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          // key: _globalKey,
           currentIndex: _currentIndex,
           onTap: onItemTapped,
           selectedItemColor: primaryColor,
