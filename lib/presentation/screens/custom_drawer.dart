@@ -28,17 +28,17 @@ class MyDrawer extends StatelessWidget {
               const DrawerTile(
                 icon: ConstanceData.offer,
                 title: "Offer and Promo",
-                page: RouteGenerator.connection,
+                page: RouteGenerator.offers,
               ),
               const DrawerTile(
                 icon: ConstanceData.policy,
                 title: "Privacy policy",
-                page: RouteGenerator.connection,
+                page: RouteGenerator.policy,
               ),
               const DrawerTile(
                 icon: ConstanceData.security,
                 title: "Security",
-                page: RouteGenerator.connection,
+                page: RouteGenerator.security,
               ),
             ],
           ),
