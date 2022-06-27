@@ -17,25 +17,30 @@ class DrawerTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: primaryColor,
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 27.h),
-        child: Row(
-          children: [
-            SvgPicture.asset(
-              icon!,
-              fit: BoxFit.scaleDown,
-            ),
-            SizedBox(width: 10.w),
-            Text(
-              title!,
-              style: TextStyle(
-                fontFamily: baseFontUrl,
-                fontWeight: FontWeight.w700,
-                fontSize: 17.sp,
-                color: whiteColor,
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, page!);
+        },
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 27.h),
+          child: Row(
+            children: [
+              SvgPicture.asset(
+                icon!,
+                fit: BoxFit.scaleDown,
               ),
-            )
-          ],
+              SizedBox(width: 10.w),
+              Text(
+                title!,
+                style: TextStyle(
+                  fontFamily: baseFontUrl,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 17.sp,
+                  color: whiteColor,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

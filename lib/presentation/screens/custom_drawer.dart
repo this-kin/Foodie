@@ -22,12 +22,12 @@ class MyDrawer extends StatelessWidget {
               ),
               const DrawerTile(
                 icon: ConstanceData.buy,
-                title: "orders",
-                page: RouteGenerator.connection,
+                title: "Orders",
+                page: RouteGenerator.order,
               ),
               const DrawerTile(
                 icon: ConstanceData.offer,
-                title: "offer and promo",
+                title: "Offer and Promo",
                 page: RouteGenerator.connection,
               ),
               const DrawerTile(

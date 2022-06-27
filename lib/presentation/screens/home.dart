@@ -5,7 +5,7 @@ import 'package:fooddelivery/presentation/screens/history.dart';
 import 'package:fooddelivery/presentation/screens/profile.dart';
 
 class Home extends StatefulWidget {
-  final VoidCallback? onPressed;
+  final Function? onPressed;
 
   const Home({
     Key? key,
@@ -17,17 +17,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-// List of pages
-  final List<Widget> _pages = const [
-    Dashboard(
-        //  onPressed: ,
-        ),
-    Favorite(),
-    Profile(),
-    History()
-  ];
-
-  // Current page index
+  // current page index
   int _currentIndex = 0;
 
   // Page controller
@@ -56,12 +46,21 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: theme.backgroundColor,
         body: PageView(
-          children: _pages,
+          // key: _globalKey,
+          children: [
+            Dashboard(
+              onPressed: () {},
+            ),
+            const Favorite(),
+            const Profile(),
+            const History()
+          ],
           controller: _pageController,
           onPageChanged: onPageChanged,
           physics: const NeverScrollableScrollPhysics(),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          // key: _globalKey,
           currentIndex: _currentIndex,
           onTap: onItemTapped,
           selectedItemColor: primaryColor,

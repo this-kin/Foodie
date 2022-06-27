@@ -5,7 +5,7 @@ import 'package:fooddelivery/presentation/widgets/home_widget/product_view.dart'
 import 'package:fooddelivery/presentation/widgets/selectable_text.dart';
 
 class Dashboard extends StatelessWidget {
-  final VoidCallback? onPressed;
+  final Function? onPressed;
 
   const Dashboard({
     Key? key,
@@ -39,7 +39,7 @@ class Dashboard extends StatelessWidget {
                     children: [
                       CustomIcon(
                         icon: ConstanceData.menu,
-                        onPressed: onPressed,
+                        onPressed: onPressed!.call(),
                       ),
                       CustomIcon(
                         icon: ConstanceData.cart,

@@ -34,4 +34,5 @@ class ConstanceData {
   static const policy = baseSvgUrl + "policy.svg";
   static const profile = baseSvgUrl + "profile.svg";
   static const security = baseSvgUrl + "security.svg";
+  static const order = baseSvgUrl + "order.svg";
 }
