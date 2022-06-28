@@ -17,6 +17,10 @@ Flutter 2.5.3
 - Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
 - A little knowledge of Dart and Flutter
 
+
+# Download
+<a href="release/app-release.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a> 
+
 # Screenshots
 
 | 1                                  | 2                                  |
@@ -80,8 +84,8 @@ flutter build apk
 - [google_fonts](https://pub.dev/packages/google_fonts)
 - [flutter_slidable](https://pub.dev/packages/flutter_slidable)
 - [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
-- [fl_chart](https://pub.dev/packages/fl_chart)
-- [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications)
+<!-- - [fl_chart](https://pub.dev/packages/fl_chart)
+- [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) -->
 
 ## Author
 
