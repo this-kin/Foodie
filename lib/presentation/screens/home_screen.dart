@@ -58,23 +58,23 @@ class _HomeScreenState extends State<HomeScreen>
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {
-              setState(() {
-                isOpen = !isOpen;
-                if (isOpen) {
-                  controller.reverse();
-                } else {
-                  controller.forward();
-                }
-              });
-            },
-            icon: Icon(
-              Icons.play_arrow,
-              size: 100.sp,
-              color: whiteColor,
-            ),
-          )
+          // IconButton(
+          //   onPressed: () {
+          //     setState(() {
+          //       isOpen = !isOpen;
+          //       if (isOpen) {
+          //         controller.reverse();
+          //       } else {
+          //         controller.forward();
+          //       }
+          //     });
+          //   },
+          //   icon: Icon(
+          //     Icons.play_arrow,
+          //     size: 100.sp,
+          //     color: whiteColor,
+          //   ),
+          // )
         ],
       ),
     );
