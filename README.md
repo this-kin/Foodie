@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 [![License: APACHE](https://img.shields.io/badge/License-APACHE-yellow.svg)](#)
 
-![Logo](ss/todey.png)
+![Logo](assets/images/appicon.png)
 
 A Food Delivery App UI Developed with Flutter Made with 💙
 
